@@ -6,8 +6,8 @@
 
 @media (min-width: 1158px) {
     .footer {
-        padding-top: 120px;
-        padding-bottom: 120px;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 }
 
@@ -82,13 +82,7 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .footer p {
-        text-align: left;
-    }
+    text-align: left;
 }
 
 .footer-social-block {
@@ -122,7 +116,14 @@
 
 .footer-social-list {
     display: flex;
+    justify-content: center;
     gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .footer-social-list {
+        justify-content: flex-start;
+    }
 }
 
 .footer-social-list li {
