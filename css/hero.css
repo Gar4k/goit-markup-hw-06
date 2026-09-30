@@ -9,8 +9,8 @@
     max-width: 1440px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 112px;
-    padding-bottom: 112px;
+    padding-top: 72px;
+    padding-bottom: 72px;
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         image-set(
@@ -53,8 +53,8 @@
     line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
-    max-width: 320px;
-    margin: 0 auto 72px;
+    max-width: 216px;
+    margin: 0 auto 48px;
 }
 
 @media (min-width: 768px) {

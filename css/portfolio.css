@@ -15,6 +15,18 @@
     column-gap: 24px;
 }
 
+@media (min-width: 768px) {
+    .portfolio-list {
+        row-gap: 72px;
+    }
+}
+
+@media (min-width: 1158px) {
+    .portfolio-list {
+        row-gap: 48px;
+    }
+}
+
 .portfolio-item {
     width: 100%;
     transition: box-shadow var(--transition-dur-and-func);

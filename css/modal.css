@@ -30,10 +30,10 @@
 /* Модальне вікно: центрується flex-ом бекдропа */
 .modal {
     position: relative;
-    width: 408px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 408px;
     margin: auto;
-    padding: 72px 24px 24px;
+    padding: 72px 16px 24px;
     border-radius: 4px;
     background-color: #fcfcfc;
     box-shadow:
@@ -46,6 +46,13 @@
 
 .backdrop.is-open .modal {
     transform: scale(1);
+}
+
+@media (min-width: 768px) {
+    .modal {
+        width: 408px;
+        padding: 72px 24px 24px;
+    }
 }
 
 /* Кнопка закриття у верхньому правому куті */

@@ -4,6 +4,13 @@
     padding-bottom: 96px;
 }
 
+@media (min-width: 1158px) {
+    .footer {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
 /* Mobile: усе в стовпчик по центру. Tablet: два стовпчики, що переносяться.
    Desktop: один рядок, як у макеті */
 .footer .container {
@@ -18,13 +25,18 @@
         flex-wrap: wrap;
         align-items: flex-start;
         column-gap: 24px;
-        row-gap: 48px;
+        row-gap: 72px;
+        padding-left: 72px;
+        padding-right: 72px;
     }
 }
 
 @media (min-width: 1158px) {
     .footer .container {
         flex-wrap: nowrap;
+        row-gap: 0;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -142,6 +154,12 @@
 
 @media (min-width: 768px) {
     .footer-subscribe {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1158px) {
+    .footer-subscribe {
         width: auto;
         margin-left: auto;
     }
@@ -150,12 +168,14 @@
 .footer-subscribe-row {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
 }
 
 @media (min-width: 768px) {
     .footer-subscribe-row {
         flex-direction: row;
+        align-items: stretch;
         gap: 24px;
     }
 }

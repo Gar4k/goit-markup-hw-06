@@ -21,6 +21,18 @@
     column-gap: 24px;
 }
 
+@media (min-width: 768px) {
+    .team-list {
+        row-gap: 64px;
+    }
+}
+
+@media (min-width: 1158px) {
+    .team-list {
+        row-gap: 72px;
+    }
+}
+
 .team-list li {
     width: 264px;
     background-color: #ffffff;

@@ -11,7 +11,6 @@
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    padding: 80px 16px 40px;
     overflow-y: auto;
     background-color: #ffffff;
     opacity: 0;
@@ -32,6 +31,16 @@
     #mobile-menu.is-open {
         display: none;
     }
+}
+
+/* Внутрішній контейнер меню: паддинги та колонка з навігацією, контактами
+   і соцмережами, притиснутими донизу */
+.mobile-menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 80px 16px 40px;
 }
 
 /* Кнопка закриття у верхньому правому куті */
@@ -101,7 +110,7 @@
 .mobile-menu-contacts ul {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
 }
 
 .mobile-contacts-link {
@@ -119,7 +128,7 @@
 /* Соцмережі в мобільному меню */
 .mobile-menu-social {
     display: flex;
-    gap: 24px;
+    gap: 40px;
 }
 
 .mobile-menu-social li {

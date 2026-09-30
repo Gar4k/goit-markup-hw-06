@@ -47,8 +47,8 @@
 
 .features-item-title {
     font-weight: 700;
-    font-size: 20px;
-    line-height: 1.2;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
@@ -64,12 +64,21 @@
 @media (min-width: 1158px) {
     .features-item-title {
         font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
     }
 }
 
 .features-item-text {
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+}
+
+@media (min-width: 1158px) {
+    .features-item-text {
+        font-weight: 400;
+    }
 }
