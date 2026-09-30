@@ -1,0 +1,75 @@
+/* Mobile: 1 колонка. Tablet: 2 колонки. Desktop: 4 колонки в ряд */
+.features > .container > ul {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+}
+
+.features > .container > ul > li {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .features > .container > ul > li {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media (min-width: 1158px) {
+    .features > .container > ul {
+        flex-wrap: nowrap;
+    }
+
+    .features > .container > ul > li {
+        width: calc((100% - 24px * 3) / 4);
+    }
+}
+
+/* Іконки-обгортки над картками показуємо лише на десктопі, як у макеті */
+.features-icon-wrapper {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    margin-bottom: 8px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    color: #2e2f42;
+}
+
+@media (min-width: 1158px) {
+    .features-icon-wrapper {
+        display: flex;
+    }
+}
+
+.features-item-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .features-item-title {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1158px) {
+    .features-item-title {
+        font-weight: 500;
+    }
+}
+
+.features-item-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}

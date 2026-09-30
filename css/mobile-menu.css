@@ -1,0 +1,150 @@
+/* Мобільне меню: окрема розмітка після футера, на весь в'юпорт по
+   ширині й висоті. Спочатку приховане, is-open — показує його.
+   На екранах від 768px не використовується — гамбургер прихований,
+   тож меню ніколи не відкриється, але про всяк випадок ховаємо і тут. */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 16px 40px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity var(--transition-dur-and-func),
+        visibility var(--transition-dur-and-func);
+}
+
+#mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+@media (min-width: 768px) {
+    #mobile-menu.is-open {
+        display: none;
+    }
+}
+
+/* Кнопка закриття у верхньому правому куті */
+.mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 1px solid rgba(46, 47, 66, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    color: #2e2f42;
+    cursor: pointer;
+    transition:
+        background-color var(--transition-dur-and-func),
+        border-color var(--transition-dur-and-func),
+        color var(--transition-dur-and-func);
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+    border-color: #404bbf;
+    background-color: #404bbf;
+    color: #ffffff;
+}
+
+/* Навігація мобільного меню */
+.mobile-menu-nav {
+    margin-bottom: auto;
+}
+
+.mobile-menu-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mobile-nav-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+}
+
+.mobile-nav-link.active {
+    color: #404bbf;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+    color: #404bbf;
+}
+
+/* Контакти в мобільному меню */
+.mobile-menu-contacts {
+    font-style: normal;
+    margin-top: 40px;
+    margin-bottom: 48px;
+}
+
+.mobile-menu-contacts ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mobile-contacts-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+.mobile-contacts-link.accent {
+    color: #4d5ae5;
+}
+
+/* Соцмережі в мобільному меню */
+.mobile-menu-social {
+    display: flex;
+    gap: 24px;
+}
+
+.mobile-menu-social li {
+    width: 40px;
+    height: 40px;
+}
+
+.mobile-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    color: #f4f4fd;
+    transition: background-color var(--transition-dur-and-func);
+}
+
+.mobile-social-link:hover,
+.mobile-social-link:focus {
+    background-color: #404bbf;
+}
+
+/* Захист від прокрутки фону, поки меню відкрите */
+body.no-scroll {
+    overflow: hidden;
+}

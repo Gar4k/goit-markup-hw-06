@@ -1,0 +1,120 @@
+/* Змінні */
+:root {
+    --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* box-sizing на всі елементи, щоб паддинги не ламали ширину і не давали
+   горизонтальну прокрутку на вузьких екранах */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Базові стилі для всієї сторінки */
+body {
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: #ffffff;
+}
+
+/* Повний скид дефолтних відступів браузера (КРИТИЧНО) */
+p, h1, h2, h3, h4, h5, h6, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* Обмежуючий контейнер, щоб контент став по центру.
+   Mobile First: базові (найменші) паддинги, далі розширюємо через min-width */
+.container {
+    width: 100%;
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Адаптивні зображення, щоб не рвали сітку */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Базовий клас для svg-іконок: колір задається через currentColor */
+.icon {
+    fill: currentColor;
+}
+
+/* Єдиний клас для відступів секцій зверху/знизу. Mobile First: менше на
+   мобільних, більше — від 1158px */
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media (min-width: 1158px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+/* Патерн для візуально прихованих, але доступних для скрінрідерів заголовків */
+.sr-only {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    margin: -1px;
+}
+
+/* Кнопка гамбургера мобільного меню: видима лише до 768px */
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #2f2f37;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
